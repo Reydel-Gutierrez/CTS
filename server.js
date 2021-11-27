@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 
@@ -7,6 +8,7 @@ const indexRoutes = require('./routes/index');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.use(express.static(path.join(__dirname, 'Interfaces')));
 app.use('/index', indexRoutes);
 app.use(indexRoutes);
 
@@ -16,4 +18,4 @@ app.use((req, res, next) => {
 
 app.listen(3000);
 
-console.log("lmao");
+console.log("Server running on Port 3000");
