@@ -65,6 +65,10 @@
 
 <div class="d-flex gap-5 justify-content-center">
   <div class="list-group mx-0">
+
+    <img class="mb-4" src="logo.svg" alt="" width="140" height="140">
+    <h1 class="h3 mb-3 fw-normal">Are you expiriencing any of this symptoms?</h1>
+
     <label class="list-group-item d-flex gap-2">
       <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
       <span>
@@ -114,13 +118,21 @@
         <small class="d-block text-muted"></small>
       </span>
     </label>
+    <label class="list-group-item d-flex gap-2">
+      <input id="cbNone" class="form-check-input flex-shrink-0" type="checkbox" value="">
+      <span>
+        None
+        <small class="d-block text-muted">By checking this box I claim that I am expiriencing no symptoms</small>
+      </span>
+    </label>
 
   </div>
 </div>
 
 <div class="d-grid gap-2 col-6 mx-auto">
-  <button type="button" class="btn btn-primary btn-sm">Submit</button>
+  <button type="button" onClick="sendSymReq()" class="btn btn-primary btn-sm">Submit</button>
 </div>
 
+    <script src="feJS/frontend.js" charset="utf-8"></script>
   </body>
 </html>
