@@ -3,22 +3,22 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-const url = 'mongodb://localhost:3000';
+const url = 'mongodb://localhost:27017/DB';
 
-const app = express();
 const dbName = 'DB';
 const client = new MongoClient(url);
 
-const indexRoutes = require('./routes/index');
-
 client.connect(function(err) {
   assert.equal(null, err);
-  console.log("Connected successfully to server");
+  console.log("Connected to db");
 
   const db = client.db(dbName);
 
  client.close();
 });
+
+const app = express();
+const indexRoutes = require('./routes/index');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
