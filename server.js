@@ -1,21 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-const url = 'mongodb://localhost:27017/DB';
-
-const dbName = 'DB';
-const client = new MongoClient(url);
-
-client.connect(function(err) {
-  assert.equal(null, err);
-  console.log("Connected to db");
-
-  const db = client.db(dbName);
-
- client.close();
-});
 
 const app = express();
 const indexRoutes = require('./routes/index');
@@ -31,5 +17,27 @@ app.use((req, res, next) => {
 });
 
 app.listen(3000);
-
 console.log("Server running on Port 3000");
+
+//mongodb
+//private key 2c697c4b-3f30-4b46-a822-dd4705a56e91, public key
+const { MongoClient } = require('mongodb');
+
+const uri = "mongodb+srv://macWork:Rg012499@db.b9gmy.mongodb.net/DB?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  console.log("Connected to DB")
+  client.close();
+});
+
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
+const ObjectId = Schema.ObjectId;
+
+const UserData = new Schema({
+  email: String,
+  password: String,
+  zip: String,
+});
