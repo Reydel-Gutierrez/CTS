@@ -25,8 +25,8 @@ console.log("Server running on Port 3000");
 const { MongoClient } = require('mongodb');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://macWork:Rg012499@db.b9gmy.mongodb.net/DB?retryWrites=true&w=majority').then(result => {
-  console.log("Connected");
+mongoose.connect('mongodb+srv://macWork:Rg012499@db.b9gmy.mongodb.net/DB').then(result => {
+  console.log("Connected to db");
 }).catch(err => {
   console.log(err);
 });

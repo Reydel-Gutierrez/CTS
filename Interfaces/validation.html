@@ -67,70 +67,18 @@
   <div class="list-group mx-0">
 
     <img class="mb-4" src="logo.svg" alt="" width="140" height="140">
-    <h1 class="h3 mb-3 fw-normal">Are you expiriencing any of this symptoms?</h1>
+    <h1 class="h3 mb-3 fw-normal">Enter vaccination card ID for validation</h1>
+
 
     <label class="list-group-item d-flex gap-2">
-      <input id="cbFever" class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
-      <span>
-        Fever or chills
-        <small class="d-block text-muted"></small>
-      </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input id="cbC" class="form-check-input flex-shrink-0" type="checkbox" value="">
-      <span>
-        Cough
-        <small class="d-block text-muted"></small>
-      </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input id="cbB" class="form-check-input flex-shrink-0" type="checkbox" value="">
-      <span>
-        Difficulty breathing
-        <small class="d-block text-muted"></small>
-      </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input id="cbSmell" class="form-check-input flex-shrink-0" type="checkbox" value="">
-      <span>
-        Loss of taste or smell
-        <small class="d-block text-muted"></small>
-      </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input id="cbSore" class="form-check-input flex-shrink-0" type="checkbox" value="">
-      <span>
-        Sore throat
-        <small class="d-block text-muted"></small>
-      </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input id="cbFatigue" class="form-check-input flex-shrink-0" type="checkbox" value="">
-      <span>
-        Fatigue
-        <small class="d-block text-muted"></small>
-      </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input id="cbNausea" class="form-check-input flex-shrink-0" type="checkbox" value="">
-      <span>
-        Nausea or vomiting
-        <small class="d-block text-muted"></small>
-      </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input id="cbNone" class="form-check-input flex-shrink-0" type="checkbox" value="">
-      <span>
-        None
-        <small class="d-block text-muted">By checking this box I claim that I am expiriencing no symptoms</small>
-      </span>
+      <input type="text" class="form-control" id="cardID" placeholder="Example: EH9899" value="">
     </label>
 
   </div>
 </div>
 
 <div class="d-grid gap-2 col-6 mx-auto">
-  <button type="button" onClick="sendSymReq()" class="btn btn-primary btn-sm">Submit</button>
+  <button type="button" onClick="checkVaccination()" class="btn btn-primary btn-sm">Submit</button>
 </div>
 
     <script src="feJS/frontend.js" charset="utf-8"></script>

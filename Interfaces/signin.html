@@ -7,7 +7,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>Sign Up</title>
-
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="styles/map.css" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 
 
@@ -47,11 +48,11 @@
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <input type="email" class="form-control" id="userName" value="">
+      <label for="floatingInput">User Name</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword" value="">
       <label for="floatingPassword">Password</label>
     </div>
 
@@ -62,7 +63,7 @@
       <button class="w-40 btn btn-primary" onClick="ForgotEFunction()" type="submit">Forgot password</button>
 
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button class="w-100 btn btn-lg btn-primary" onClick="logUser()" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted"></p>
   </form>
 </main>
