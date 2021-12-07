@@ -7,7 +7,9 @@ var person = {
 };
 
 function ForgotEFunction(){
-alert("Email Sent, Please make sure email is inserted before clicking");
+
+location.replace('http://localhost:3000/forgotP.html');
+
 }
 
 function addNameToList(){

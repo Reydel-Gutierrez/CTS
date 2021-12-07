@@ -30,3 +30,21 @@ mongoose.connect('mongodb+srv://macWork:Rg012499@db.b9gmy.mongodb.net/DB').then(
 }).catch(err => {
   console.log(err);
 });
+
+const userSchema = new mongoose.Schema({
+  userName: String,
+  password: String,
+  zip: String
+});
+
+const user = mongoose.model('user', userSchema);
+
+const newUser = new user({
+
+  userName: "Clarke",
+  password: "CP523142",
+  zip: "33144"
+
+ });
+
+ newUser.save();
