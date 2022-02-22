@@ -1,3 +1,4 @@
+*Documantation for developers*
 Welcome to the covid 19 Tracking System Application.
 
 How to run the application.
@@ -16,3 +17,4 @@ How to start the server.
 1) Find the current Directory where the application is.
 2) Start the terminal or console with command "Node server.js"
 3) Go to http://localhost:3000/ to access the application
+
